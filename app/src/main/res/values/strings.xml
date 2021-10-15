@@ -2,4 +2,7 @@
     <string name="app_name">振興五倍加碼券速查</string>
     <string name="enter_hint">請輸入要查詢的身分證字號後三碼</string>
     <string name="btn_check" >點我檢查</string>
+    <string name="empty_enter">空輸入</string>
+    <string name="not_meet">[%1$s]都沒有中</string>
+    <string name="meet_criteria">恭喜中了！結果如下：\n%1$s</string>
 </resources>

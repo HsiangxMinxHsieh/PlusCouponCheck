@@ -21,6 +21,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="@string/enter_hint"
             app:endIconMode="dropdown_menu"
             app:endIconTintMode="src_atop"
@@ -48,6 +49,7 @@
             android:id="@+id/btn_check"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:onClick="@{()->vm.check(vm.xmlContent)}"
             android:text="@string/btn_check"
             app:layout_constraintTop_toBottomOf="@+id/edt_input_layout" />
@@ -55,7 +57,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
             android:text="@{vm.showResult}"
+            android:textColor="@color/black"
+            android:textSize="40sp"
             app:layout_constraintTop_toBottomOf="@+id/btn_check" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
