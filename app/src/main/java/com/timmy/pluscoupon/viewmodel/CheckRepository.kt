@@ -1,27 +1,16 @@
-package com.timmy.hiltmvvm.viewmodel
+package com.timmy.pluscoupon.viewmodel
 
 import androidx.lifecycle.MutableLiveData
-import com.timmy.hiltmvvm.api.ApiService
-import com.timmy.hiltmvvm.database.SampleData
+import com.timmy.pluscoupon.database.CheckData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
 import javax.inject.Inject
 
-class SampleRepository @Inject constructor() {
+class CheckRepository @Inject constructor() {
 
-    @Inject
-    lateinit var retrofit: Retrofit
-
-
-    private val apiService by lazy {
-        retrofit.create(ApiService::class.java)
-    }
-
-
-    private val result by lazy { MutableLiveData<MutableList<SampleData>>() }
+    private val result by lazy { MutableLiveData<MutableList<CheckData>>() }
 
     fun getLiveDataInRealm() = result
 
@@ -30,7 +19,7 @@ class SampleRepository @Inject constructor() {
 
     fun getDataFromAPI() {
         CoroutineScope(Dispatchers.IO).launch {
-            val responseBody = apiService.getData()
+//            val responseBody = apiService.getData()
 
             MainScope().launch {
             //處理畫面更新

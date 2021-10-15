@@ -1,11 +1,11 @@
-package com.timmy.hiltmvvm.application
+package com.timmy.pluscoupon.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
 @HiltAndroidApp
-class SampleApplication : Application() {
+class CheckApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

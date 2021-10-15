@@ -1,17 +1,17 @@
-package com.timmy.hiltmvvm.ui
+package com.timmy.pluscoupon.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.timmy.hiltmvvm.R
-import com.timmy.hiltmvvm.databinding.ActivitySampleBinding
-import com.timmy.hiltmvvm.viewmodel.SampleViewModel
+import com.timmy.pluscoupon.R
+import com.timmy.pluscoupon.databinding.ActivitySampleBinding
+import com.timmy.pluscoupon.viewmodel.CheckViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SampleActivity : AppCompatActivity() {
-    private val viewModel: SampleViewModel by lazy { ViewModelProvider(this).get(SampleViewModel::class.java) }
+class CheckActivity : AppCompatActivity() {
+    private val viewModel: CheckViewModel by lazy { ViewModelProvider(this).get(CheckViewModel::class.java) }
     private lateinit var mBinding: ActivitySampleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

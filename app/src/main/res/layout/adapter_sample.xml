@@ -7,7 +7,7 @@
 
         <variable
             name="data"
-            type="com.timmy.hiltmvvm.database.SampleData" />
+            type="com.timmy.pluscoupon.database.CheckData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

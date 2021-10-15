@@ -1,4 +1,4 @@
-package com.timmy.hiltmvvm.ui
+package com.timmy.pluscoupon.ui
 
 import android.graphics.Bitmap
 import android.view.LayoutInflater
@@ -12,14 +12,14 @@ import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import com.timmy.hiltmvvm.R
-import com.timmy.hiltmvvm.database.SampleData
-import com.timmy.hiltmvvm.databinding.AdapterSampleBinding
+import com.timmy.pluscoupon.R
+import com.timmy.pluscoupon.database.CheckData
+import com.timmy.pluscoupon.databinding.AdapterSampleBinding
 
 /**DataBinding的資料更新方式，請直接在layout/adapter_sample內指定data以更新畫面。*/
 
 class SampleAdapter: RecyclerView.Adapter<SampleAdapter.ViewHolder>() {
-    var list: MutableList<SampleData> = ArrayList()
+    var list: MutableList<CheckData> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
@@ -37,7 +37,7 @@ class SampleAdapter: RecyclerView.Adapter<SampleAdapter.ViewHolder>() {
 
     class ViewHolder private constructor(private val binding: AdapterSampleBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: SampleData) {
+        fun bind(item: CheckData) {
             binding.data = item
         }
 

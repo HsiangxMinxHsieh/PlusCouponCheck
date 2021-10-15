@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.SampleActivity">
+    tools:context=".ui.CheckActivity">
 
     <data>
 
         <variable
             name="vm"
-            type="com.timmy.hiltmvvm.viewmodel.SampleViewModel" />
+            type="com.timmy.pluscoupon.viewmodel.CheckViewModel" />
 
     </data>
 
