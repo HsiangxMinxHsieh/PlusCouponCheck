@@ -6,12 +6,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.timmy.hiltmvvm.R
 import com.timmy.hiltmvvm.databinding.ActivitySampleBinding
-import com.timmy.rootcodingtest.viewmodel.MainViewModel
+import com.timmy.hiltmvvm.viewmodel.SampleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SampleActivity : AppCompatActivity() {
-    private val viewModel: MainViewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
+    private val viewModel: SampleViewModel by lazy { ViewModelProvider(this).get(SampleViewModel::class.java) }
     private lateinit var mBinding: ActivitySampleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

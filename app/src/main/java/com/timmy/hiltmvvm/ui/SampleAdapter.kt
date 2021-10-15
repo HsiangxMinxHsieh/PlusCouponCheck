@@ -1,4 +1,4 @@
-package com.timmy.hiltmvvm.base
+package com.timmy.hiltmvvm.ui
 
 import android.graphics.Bitmap
 import android.view.LayoutInflater

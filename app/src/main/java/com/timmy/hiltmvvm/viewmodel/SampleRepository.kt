@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class MainRepository @Inject constructor() {
+class SampleRepository @Inject constructor() {
 
     @Inject
     lateinit var retrofit: Retrofit
@@ -30,7 +30,7 @@ class MainRepository @Inject constructor() {
 
     fun getDataFromAPI() {
         CoroutineScope(Dispatchers.IO).launch {
-            val responseBody = apiService.getNews()
+            val responseBody = apiService.getData()
 
             MainScope().launch {
             //處理畫面更新
