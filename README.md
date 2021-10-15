@@ -8,7 +8,7 @@
 
 ● MVVM架構，dataBinding　實作UI </br>
 ● Kotlin語言撰寫 </br>
-● Material Ui Component　按鍵與輸入框效果</br>
+● Material Ui Component　按鍵與輸入框效果、檢查歷史紀錄</br>
 ● Hilt DI依賴注入</br>
 
 
