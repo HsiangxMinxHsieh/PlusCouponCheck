@@ -9,7 +9,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.timmy.pluscoupon.database.CheckData
-import com.timmy.pluscoupon.util.toJson
 import timber.log.Timber
 
 
@@ -20,22 +19,18 @@ class CheckViewModel @ViewModelInject constructor(private val getRawRepository: 
 
     private val checkData: CheckData by lazy { getRawRepository.getData() }
 
-    private val _showResult by lazy{MutableLiveData<String>()}
+    private val _showResult by lazy { MutableLiveData<String>() }
     val showResult: LiveData<String> = _showResult
 
     init {
+        checkData
         _showResult.postValue("")
-    }
-
-    fun getData() {
-        Timber.e("取到的資料是=>${checkData.toJson()}")
     }
 
     fun check(code: String?) {
         Timber.e("to check code =>$code")
 
-
-
+        _showResult.postValue(code)
     }
 
 

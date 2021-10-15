@@ -18,8 +18,9 @@ class CheckActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         initViewModel()
-        initData()
+
         initObserverble()
     }
 
@@ -36,7 +37,4 @@ class CheckActivity : AppCompatActivity() {
         }
     }
 
-    private fun initData() {
-        viewModel.getData()
-    }
 }

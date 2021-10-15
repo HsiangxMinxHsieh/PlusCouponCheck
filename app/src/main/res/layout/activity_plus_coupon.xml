@@ -30,9 +30,11 @@
 
             <AutoCompleteTextView
                 android:id="@+id/edt_input"
+                style="@style/EditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:completionThreshold="0"
+                android:hint="@string/enter_hint"
                 android:imeOptions="actionSearch"
                 android:inputType="number"
                 android:lines="1"
@@ -49,5 +51,11 @@
             android:onClick="@{()->vm.check(vm.xmlContent)}"
             android:text="@string/btn_check"
             app:layout_constraintTop_toBottomOf="@+id/edt_input_layout" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.showResult}"
+            app:layout_constraintTop_toBottomOf="@+id/btn_check" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
