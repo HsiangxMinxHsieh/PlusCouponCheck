@@ -51,11 +51,26 @@ android {
         dataBinding = true
     }
 
-    kapt {
-        generateStubs = true
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def formattedName = "${applicationId}" +
+                    "-${variant.buildType.name}" +
+                    "-${versionName}" +
+                    ".${variant.versionCode}" +
+                    "-${getDate()}"
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                outputFileName = "${formattedName}.apk"
+            }
+        }
     }
-
 }
+
+def getDate() {
+    return new Date().format('yyMMdd HHmm')
+}
+
+
 
 dependencies {
 
