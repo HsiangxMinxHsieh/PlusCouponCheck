@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PlusCouponCheck</string>
+    <string name="enter_hint">請輸入要查詢的身分證字號後三碼</string>
+    <string name="btn_check" >點我檢查</string>
 </resources>

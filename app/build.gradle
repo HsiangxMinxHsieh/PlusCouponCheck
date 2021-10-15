@@ -51,6 +51,10 @@ android {
         dataBinding = true
     }
 
+    kapt {
+        generateStubs = true
+    }
+
 }
 
 dependencies {
